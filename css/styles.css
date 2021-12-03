@@ -184,19 +184,17 @@ a {
 }
 
 .benefits-list {
-    margin-bottom: calc(-1 * var(--margin-gap));
-    margin-right: calc(-1 * var(--margin-gap));
-    
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
 }
 
-
 .benefits-item {
-    margin-bottom: var(--margin-gap);
-    margin-right: var(--margin-gap);
-
     flex-basis: calc(100% / 4 - var(--margin-gap));
+}
+
+.benefits-item:not(:last-child) {
+    margin-right: var(--margin-gap);
 }
 
 .benefits-title {
@@ -261,14 +259,22 @@ a {
 .team-list {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .team-item {
     background-color: var(--color-white);
 
     flex-basis: calc(100% / 4 - var(--margin-gap));
-    padding-bottom: 30px;
     border-radius: 0px 0px 4px 4px;
+}
+
+.team-item:not(:last-child) {
+    margin-right: var(--margin-gap);
+}
+
+.team-content {
+    padding: var(--margin-gap) 0;
 }
 
 .team-member, 
@@ -277,10 +283,6 @@ a {
     line-height: 1.19;
     letter-spacing: 0.03em;
     text-align: center;
-}
-
-.team-img {
-    margin-bottom: 30px;
 }
 
 .team-member {
@@ -302,10 +304,15 @@ a {
     display: block;
     margin-bottom: 20px;
 }
+/* 
+.address-list {
+    display: flex;
+    flex-direction: column;
+} */
 
-.address-item {
+/* .address-item {
     display: block;
-}
+} */
 
 .address-item:not(:last-child) {
     margin-bottom: 9px;
@@ -355,7 +362,6 @@ a {
     border: none;
 }
 
-
 .filter-button:hover,
 .filter-button:focus {
     background-color: var(--color-blue);
@@ -373,13 +379,13 @@ a {
     margin-right: var(--margin-gap);
     margin-bottom: var(--margin-gap);
 
-    border: 1px solid #EEEEEE;
-
     flex-basis: calc(100% / 3 - var(--margin-gap));
 }
 
 .portfolio-content {
     padding: 20px 24px;
+    
+    border: 1px solid #EEEEEE;
 }
 
 .portfolio-title {
@@ -399,3 +405,6 @@ a {
     letter-spacing: 0.03em;
 }
 
+* {
+    outline: 1px solid red;
+}
