@@ -45,18 +45,16 @@ a {
     text-decoration: none;
 }
 
-/*  */
-.header {
-    border-bottom: 1px solid #ECECEC;
-}
-
-/* СТУДИЯ */
-
 /* Стилизация контейнера */
 .conteiner {
-    width: 1200px;
+    max-width: 1200px;
     padding: 0 15px;
     margin: 0 auto;
+}
+
+/* ХЕДЕР */
+.header {
+    border-bottom: 1px solid #ECECEC;
 }
 
 /* Элементы хедера в ряд */
@@ -126,6 +124,8 @@ a {
     color: var(--color-blue);
 }
 
+/* СТУДИЯ */
+
 /* ------Герой------ */
 
 /* Фиктивный цвет героя */
@@ -158,7 +158,6 @@ a {
     background-color: var(--color-blue);
     color: var(--color-white);
 
-    font-family: inherit;
     font-weight: 700;
     font-size: 16px;
     line-height: 1.87;
@@ -251,7 +250,7 @@ a {
     display: block;
 }
 
-/* Наша команда */
+/* ------Наша команда------ */
 .team {
     background-color:var(--background-color-grey);
 }
@@ -293,7 +292,7 @@ a {
     margin-bottom: 10px;
 }
 
-/* Футер */
+/* ФУТЕР */
 .footer {
     background-color: var(--footer-color);
     padding: 60px 0;
@@ -304,15 +303,6 @@ a {
     display: block;
     margin-bottom: 20px;
 }
-/* 
-.address-list {
-    display: flex;
-    flex-direction: column;
-} */
-
-/* .address-item {
-    display: block;
-} */
 
 .address-item:not(:last-child) {
     margin-bottom: 9px;
@@ -335,6 +325,7 @@ a {
 
 /* ПОРТФОЛИО */
 
+/* ------Список фильтров------ */
 .filter-list {
     display: flex;
     justify-content: center;
@@ -350,7 +341,6 @@ a {
     background-color: var(--background-color-grey);
     color: var(--color-black);
 
-    font-family: inherit;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.62;
@@ -368,6 +358,7 @@ a {
     color: var(--color-white);
 }
 
+/* ------Контент фильтра------ */
 .portfolio-list {
     display: flex;
     flex-wrap: wrap;
@@ -384,7 +375,6 @@ a {
 
 .portfolio-content {
     padding: 20px 24px;
-    
     border: 1px solid #EEEEEE;
 }
 
@@ -403,8 +393,4 @@ a {
     font-size: 16px;
     line-height: 1.87;
     letter-spacing: 0.03em;
-}
-
-* {
-    outline: 1px solid red;
 }
