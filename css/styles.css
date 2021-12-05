@@ -47,9 +47,17 @@ a {
 
 /* Стилизация контейнера */
 .conteiner {
-    max-width: 1200px;
+    width: 1200px;
     padding: 0 15px;
     margin: 0 auto;
+}
+
+.visually-hidden {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
 }
 
 /* ХЕДЕР */
@@ -60,8 +68,8 @@ a {
 /* Элементы хедера в ряд */
 .header .conteiner {
     align-items: center;
-    padding-top: 24px;
-    padding-bottom: 25px;
+    /* padding-top: 24px;
+    padding-bottom: 25px; */
     display: flex;
 }
 
@@ -102,12 +110,17 @@ a {
 
 .nav-link, 
 .contacts-link {
+    display: block;
+
     color: var(--color-black);
 
     font-weight: 500;
     font-size: 14px;
     line-height: 1.17;
     letter-spacing: 0.02em;
+
+    padding-top: 24px;
+    padding-bottom: 25px;
 }
 
 .contacts-link {
@@ -185,11 +198,10 @@ a {
 .benefits-list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
 }
 
 .benefits-item {
-    flex-basis: calc(100% / 4 - var(--margin-gap));
+    flex-basis: calc((100% - 3 * var(--margin-gap)) / 4);
 }
 
 .benefits-item:not(:last-child) {
@@ -214,7 +226,6 @@ a {
     letter-spacing: 0.03em;
 }
 
-/* «B15» Для всех секций !!!!!!!!!!!!!! */
 .benefits.section {
     padding-bottom: 0;
 }
@@ -227,9 +238,13 @@ a {
 
 .work-list {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    /* flex-direction: row;
+    justify-content: space-between; */
     flex-wrap: wrap;
+}
+
+.work-item:not(:last-child) {
+    margin-right: var(--margin-gap);
 }
 
 .work-title,
@@ -248,7 +263,10 @@ a {
 
 .work-img {
     display: block;
+    height: auto;
+    flex-basis: calc((100% - 2 * var(--margin-gap)) / 3);
 }
+
 
 /* ------Наша команда------ */
 .team {
@@ -257,14 +275,14 @@ a {
 
 .team-list {
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     flex-wrap: wrap;
 }
 
 .team-item {
     background-color: var(--color-white);
 
-    flex-basis: calc(100% / 4 - var(--margin-gap));
+    flex-basis: calc((100% - 3 * var(--margin-gap)) / 4);
     border-radius: 0px 0px 4px 4px;
 }
 
@@ -369,7 +387,6 @@ a {
 .portfolio-item {
     margin-right: var(--margin-gap);
     margin-bottom: var(--margin-gap);
-
     flex-basis: calc(100% / 3 - var(--margin-gap));
 }
 
